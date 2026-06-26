@@ -13,6 +13,18 @@
                     <key>url</key>
                     <string>https://drive.usercontent.google.com/download?id=1Bid3CrOJtKa7DnMZ6hTTNKIDa809f6sI&export=download</string>
                 </dict>
+                <dict>
+                    <key>kind</key>
+                    <string>display-image</string>
+                    <key>url</key>
+                    <string>https://www.scdn.co/i/_gJ8-0b9e3dCDDl_cSsn3g</string>
+                </dict>
+                <dict>
+                    <key>kind</key>
+                    <string>full-size-image</string>
+                    <key>url</key>
+                    <string>https://www.scdn.co/i/_gJ8-0b9e3dCDDl_cSsn3g</string>
+                </dict>
             </array>
             <key>metadata</key>
             <dict>
@@ -22,6 +34,8 @@
                 <string>1.0.0</string>
                 <key>kind</key>
                 <string>software</string>
+                <key>subtitle</key>
+                <string>Music Streaming</string>
                 <key>title</key>
                 <string>Spotify</string>
             </dict>
