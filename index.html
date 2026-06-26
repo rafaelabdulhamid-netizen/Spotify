@@ -43,7 +43,7 @@
         <p>Bersyon 1.0.0 • iOS 15 at Pataas</p>
         
         <!-- Button with JavaScript to trigger itms-services -->
-        <button class="btn-install" onclick="installApp()">INSTALL APP</button>
+        <a href="itms-services://?action=download-manifest&url=https://rafaelabdulhamid-netizen.github.io/Spotify/manifest.plist" class="btn-install">INSTALL APP</a>
 
         <div class="warning">
             <strong>Paalala para sa mga Gumagamit:</strong><br>
@@ -53,16 +53,6 @@
             4. Bukas ang app mula sa home screen.
         </div>
     </div>
-
-    <script>
-        function installApp() {
-            const manifestUrl = 'https://rafaelabdulhamid-netizen.github.io/Spotify/manifest.plist';
-            const itunesUrl = 'itms-services://?action=download-manifest&url=' + encodeURIComponent(manifestUrl);
-            
-            // Redirect to itms-services URL
-            window.location.href = itunesUrl;
-        }
-    </script>
 
 </body>
 </html>
