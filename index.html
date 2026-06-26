@@ -33,6 +33,10 @@
             margin-top: 30px; background: #fff3cd; color: #856404;
             padding: 15px; border-radius: 10px; font-size: 12px; text-align: left;
         }
+        .debug {
+            margin-top: 20px; background: #f0f0f0; padding: 10px; border-radius: 8px;
+            font-size: 11px; color: #666; word-break: break-all;
+        }
     </style>
 </head>
 <body>
@@ -43,7 +47,7 @@
         <p>Bersyon 1.0.0 • iOS 15 at Pataas</p>
         
         <!-- Button with JavaScript to trigger itms-services -->
-        <a href="itms-services://?action=download-manifest&url=https://rafaelabdulhamid-netizen.github.io/Spotify/manifest.plist" class="btn-install">INSTALL APP</a>
+        <button class="btn-install" onclick="installApp(); return false;">INSTALL APP</button>
 
         <div class="warning">
             <strong>Paalala para sa mga Gumagamit:</strong><br>
@@ -52,7 +56,30 @@
             3. Pumunta sa <strong>Settings > General > VPN & Device Management</strong> at i-trust ang developer certificate.<br>
             4. Bukas ang app mula sa home screen.
         </div>
+
+        <div class="debug" id="debug"></div>
     </div>
+
+    <script>
+        function installApp() {
+            const manifestUrl = 'https://rafaelabdulhamid-netizen.github.io/Spotify/manifest.plist';
+            const itunesUrl = 'itms-services://?action=download-manifest&url=' + encodeURIComponent(manifestUrl);
+            
+            // Log for debugging
+            console.log('Opening: ' + itunesUrl);
+            document.getElementById('debug').innerHTML = 'Manifest: ' + manifestUrl;
+            
+            // Try multiple methods to ensure it works
+            try {
+                // Method 1: Direct location change
+                window.location = itunesUrl;
+            } catch(e) {
+                console.error('Error:', e);
+            }
+            
+            return false;
+        }
+    </script>
 
 </body>
 </html>
